@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" ng-app="newSite">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statik Musik - Home Page</title>
+    <meta name="description" content=""> 
+    <link rel="stylesheet"  href="/css/app.css"/>
+</head>
+<body ng-controller="MainCtrl"> 
+    <ul id="gn-menu" class="gn-menu-main">
+        <li class="gn-trigger">
+            <a class="gn-icon gn-icon-menu">
+                <span>Menu</span>
+            </a>
+            <nav class="gn-menu-wrapper">
+                <div class="gn-scroller">
+                    <ul class="gn-menu">
+                        <li class="gn-search-item" >
+                            <input placeholder="Search" type="search" class="gn-search" >
+                            <a class="gn-icon gn-icon-search">
+                                <span>Search</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="setRoute( 'views/music')">
+                                <i style="padding: 0 20px;" class="icon-headphones icon-width"></i>&nbsp; Music</a>
+                        </li>
+                        <li>
+                            <a ng-click="setRoute( 'views/downloads')" class="gn-icon gn-icon-download">Downloads</a>
+                        </li>
+                        <li>
+                            <a ng-click="setRoute( 'views/about')">
+                                <i style="padding: 0 20px;" class="icon-user icon-width"></i>&nbsp; Bio</a>
+                        </li>
+                        <li>
+                            <a ng-click="setRoute( 'views/contact')">
+                                <i style="padding: 0 20px;" class="icon icon-envelope"></i>Contact</a>
+                        </li>
+                        <li>
+                            <a ng-click="setRoute( 'views/video')">
+                                <i style="padding: 0 20px;" class="icon-expand icon-width"></i> Video</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /gn-scroller --> 
+            </nav>
+        </li>
+        <li><a ng-click="setRoute( '/')" class="brand nosifer">Statik Musik</a></li>
+        <li class="dropdown-menu-cus">
+            <a href="#" class="dropdown-toggle"\>Social <i class="icon-chevron-down"></i></a>
+            <!-- DROP DOWN MENU -->
+            <ul class="dropdown dropdown-right social-buttons">
+                <li><a href="https://www.facebook.com/StatikEDM?ref=hl" class="social social-sm" target="blank"><i class="icon-facebook"></i></a></li>
+                <li><a href="https://twitter.com/StatikEDM" class="social social-sm" target="blank"><i class="icon icon-twitter"></i></a></li>
+                <li><a href="http://soundcloud.com/statikmusik" class="social social-sm" target="blank"><i class="icon-headphones"></i></a></li>
+                <li><a href="http://soundcloud.com/statikmusik" class="social social-sm" target="blank"><i class="icon icon-youtube"></i></a></li>
+                <li><a class="social social-sm" href="https://plus.google.com/108280495407581991595/"><i class="icon-google-plus"></i></a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <div id="page-container" ng-view>
+         
+    </div>
+<!-- <script src="http://code.angularjs.org/angular-1.2.0-8336b3a/angular.min.js"></script> -->
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script> 
+
+    <script src="/js/app.js"></script>  
+    <script src="/js/controller.js"></script>
+     <script src="/js/ng-progress.js"></script>
+    <script src="/js/lib/modules/gnmenu.js"></script>
+     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> 
+     
+     <script>
+          // new gnMenu(document.getElementById('gn-menu'));
+          // $(document).ready(function() {
+          //   $(".box > .box_header").click(function(){
+          //     $(this).parent().children(".box_content").stop().slideToggle(500, 'easeOutBounce');
+          //   }); 
+          // });
+     </script>-->
+ </body>
+</html>

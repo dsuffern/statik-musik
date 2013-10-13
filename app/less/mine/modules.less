@@ -1,0 +1,299 @@
+@teal-bright: #00bded;
+@white: #ffffff;
+@orange: #ED490E;
+// @yellow: #ffba00;
+@yellow: #ffba00;
+
+@dark: #1c1d21;
+
+.mt-40 {margin-top: 40px;}
+.mb-40 {margin-bottom: 40px;}
+.pad-sm {padding: 10px;}
+.pad {padding: 20px;}
+.pad-v {padding: 40px 0 40px 0;}
+.pad-h {padding: 0 40px 0 40px}
+.white {background-color:#fff !important}
+.orange { color: #ED490E !important; }
+.yellow {color: @yellow !important;}
+.block-level { 
+	padding: 10px auto;
+	overflow-x: hidden;
+	.make-row()
+}
+.one-half {
+	display: block;
+	float: left;
+	padding: 0 15px;
+	margin: 0;
+	width: 50%;
+}
+.nosifer {
+	font-family: "nosifer" !important;
+}
+
+// -------------------------------------------------------
+//  ENTRY STYLES + Header + Componenets
+// -------------------------------------------------------
+.entry { margin-bottom: 40px; 
+		 .make-row(); }
+	.entry-header { background-color: #ffba00;
+					color: #fff;
+					display: block;  
+					padding: 13px 20px;
+					width: 100%;
+					margin: 0 0;
+					.clearfix();
+		.entry-title { font: 300 36px/1 "Roboto Slab Light"; width: 100%; text-transform: uppercase; }
+	}
+
+//   Entry Content 
+//-------------------------------------------
+.entry-content { background: #fff; 
+				 overflow-x: hidden;
+				 .box-shadow(inset 0px -1px #ccc);
+				 .make-row();	 
+		 		  padding-bottom: 10px; }
+ 
+
+//   Entry Content iframe Handling
+//-------------------------------------------	
+.entry-content > iframe {display: block;.size(95%, 250px); padding: 0; margin: 0 2.5%; }
+
+@media screen and (max-width:998px) {
+.entry-content > iframe {display: block;.size(95%, 450px); padding: 0; margin: 0 2.5%; }
+	
+}
+
+//   Entry Content Hover Transition
+//-------------------------------------------
+.entry-hover-change {
+	background: #fff;
+	.transition(all 380ms ease);
+		&:hover { background-color: #1c1d21; 
+				  color:#dfdfdf; 
+				  cursor: pointer;  }
+}
+
+.entry-snippet {
+	.make-lg-column(6);
+	background: #fafafa;
+	padding: 20px 30px;
+	.transition(all 380ms ease);
+		&:hover { background-color: #1c1d21; 
+				  color:#dfdfdf; 
+				  cursor: pointer;  }	
+}
+
+//   Entry Description 
+//-------------------------------------------
+.entry-description {  
+					 .make-lg-column(9); 
+				  p {max-width: 100%;padding: 10px 0; }
+				} 
+
+//   Entry Date 
+//-------------------------------------------
+.entry-date-wrap {.make-lg-column(3);}
+.entry-date { border-radius: 50%;
+			  background: #000;
+			  .square(80px); 
+			  text-align: center; 
+			  margin-left: 10px;
+				.date { color: #fff;
+						font-size: 30px;
+						margin: 7px 0 0 0;
+						padding-bottom: 0; }
+				.month { color: #fff;
+					     font-size: 14px;
+					     text-transform: uppercase;
+					     padding: 0;
+						 margin: -5px 0 0 0; }
+} 
+
+// 	FEAT POST
+// ------------------------------------------
+.feat-post {.make-row();
+				.feat-post-title {color: @yellow; font: 300px 28px/1.2 "Roboto Slab Light";}
+			}
+.feat-post figure {.make-lg-column(6); img{display: block; margin:10px auto;}}
+.feat-post .post-content {.make-lg-column(6)}
+
+
+//  CUSTOM HORIZONTAL RULE
+// =================================
+div.hr { background: url("../../stripe1.png") repeat scroll left top transparent;
+         margin: 10px 0; 
+         height: 10px;
+         display: block;
+         border: 1px solid rgb(119, 119, 119); }
+
+//  BIO FEATURE IMAGE & COPY
+// ---------------------------------------
+.bio-img {  display: block;
+			position: relative;
+			.size(100%,400px);
+			max-height: 400px; 
+			overflow: hidden;
+				> img { .size(100%,442px); }
+}
+.bio-copy p{ color: #ffffff; font: 400 21px/31px 'Roboto Slab'; }
+
+ 
+//  YOUTUBE PROGRESS BARS STYLES
+// ---------------------------------------
+#progress {
+	position:fixed;
+	z-index:1000;
+	top:0;
+	left:-6px;
+	width:0%;
+	height:2px;
+	background:@yellow; 
+	border-radius:1px; 
+	.transition(width 500ms ease-out);
+	.transition(opacity 400ms linear);
+}
+#progress.done { opacity:0 }
+#progress dd,#progress dt {
+	position:absolute;
+	top:0;
+	height:2px; 
+	.box-shadow(#b91f1f 1px 0 6px 1px); 
+	border-radius:100%
+}
+#progress dd {
+	opacity:1;
+	width:20px;
+	right:0;
+	clip:rect(-6px,22px,14px,10px)
+}
+#progress dt {
+	opacity:1;
+	width:180px;
+	right:-80px;
+	clip:rect(-6px,90px,14px,-6px)
+}
+@-moz-keyframes pulse { 
+    30% { opacity: 1 }
+    60% { opacity: 0 }
+    100% { opacity: 1 }
+}
+@-ms-keyframes pulse { 
+    30% { opacity: .6 }
+    60% { opacity: 0 }
+    100% { opacity: .6 }
+}
+@-o-keyframes pulse { 
+    30% { opacity: 1 }
+    60% { opacity: 0 }
+    100% { opacity: 1 }
+}
+@-webkit-keyframes pulse { 
+    30% { opacity: .6 }
+    60% { opacity: 0 }
+    100% { opacity: .6 }
+}
+@keyframes pulse { 
+    30% { opacity: 1 }
+    60% { opacity: 0 }
+    100% { opacity: 1 }
+}
+#progress.waiting dd,#progress.waiting dt {
+	-moz-animation:pulse 2s ease-out 0s infinite;
+	-ms-animation:pulse 2s ease-out 0s infinite;
+	-o-animation:pulse 2s ease-out 0s infinite;
+	-webkit-animation:pulse 2s ease-out 0s infinite;
+	animation:pulse 2s ease-out 0s infinite
+}
+
+// PULSE ANIMATION
+
+@-moz-keyframes color-pulse {
+0% {color: @dark;}
+// 10% {color: @teal-bright;}
+// 25% {color: @white;} 
+50% {color:@yellow;}
+65% {color: @dark;}
+// 80% {color: @teal-bright;}
+// 90% {color: @white;} 
+100% {color:@yellow;}
+}
+@-ms-keyframes color-pulse {
+0% {color: @dark;}
+// 10% {color: @teal-bright;}
+// 25% {color: @white;} 
+30% {color:@yellow;}
+65% {color: @dark;}
+// 80% {color: @teal-bright;}
+// 90% {color: @white;} 
+100% {color:@yellow;}
+}
+@-o-keyframes color-pulse {
+0% {color: @dark;}
+// 10% {color: @teal-bright;}
+// 25% {color: @white;} 
+30% {color:@yellow;}
+65% {color: @dark;}
+// 80% {color: @teal-bright;}
+// 90% {color: @white;} 
+100% {color:@yellow;}
+}
+@-webkit-keyframes color-pulse {
+0% {color: @dark;}
+// 10% {color: @teal-bright;}
+// 25% {color: @white;} 
+30% {color:@yellow;}
+65% {color: @dark;}
+// 80% {color: @teal-bright;}
+// 90% {color: @white;} 
+100% {color:@yellow;}
+}
+@keyframes color-pulse {
+0% {color: @dark;}
+// 10% {color: @teal-bright;}
+// 25% {color: @white;} 
+30% {color:@yellow;}
+65% {color: @dark;}
+// 80% {color: @teal-bright;}
+// 90% {color: @white;} 
+100% {color:@yellow;}
+}
+
+#color-pulse {
+	-webkit-animation: color-pulse 20s infinite alternate; 
+	-moz-animation: color-pulse 20s infinite alternative;
+}
+
+// ================================================================
+// 	EXPANDING BOXES
+// ----------------------------------------------------------------
+
+.box {
+  background: #e1e1e1;
+  padding: 10px;
+  margin-bottom: 20px;
+  // box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25),
+  //   0 30px 10px -20px rgba(0, 0, 0, .25);
+}
+
+.box_header {
+  cursor: pointer;
+  background: @dark;
+  color: @white;
+  padding: 20px;
+}
+
+.box_header:hover {
+ 
+}
+
+.box_header i { 
+  float: right; 
+}
+
+.box_content {
+  display: none;
+  background: #eee;
+  padding: 20px;
+  // margin-top: 10px;
+}

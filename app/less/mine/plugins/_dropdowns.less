@@ -1,0 +1,71 @@
+li.dropdown-menu-cus {
+    display: block;
+    height: 60px;
+    position: relative;
+    .transition(all 1.5s ease-in);
+    ul {
+        display: none;
+        height: 0px;
+        position: absolute;
+        right: -100%;
+        width: 150px;
+        visibility: hidden;
+        opacity: 0;
+        .transition(all 1.5s ease-in);
+    }
+}
+
+li.dropdown-menu-cus:hover  {
+    ul {
+        display: block;
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+    }
+}
+li.dropdown-menu-cus ul li {
+    display: block;
+    width: 100%;
+    height: 55px;
+}
+li.dropdown-menu-cus ul li:first-of-type {margin-top: 19px;}
+li.dropdown-menu-cus ul li:first-of-type a.social.social-sm {
+     &:hover {
+        background: #4c66a4;
+        border: 1px solid #4c66a4;
+        color:#ffffff;
+    }   
+}
+li.dropdown-menu-cus ul li:nth-of-type(3) a.social.social-sm {
+    &:hover {
+        background: #ff6600;
+        border: 1px solid #ff6600;
+        color:#ffffff;
+    }   
+
+
+}
+li.dropdown-menu-cus ul li:nth-of-type(2) a.social.social-sm {
+    &:hover {
+        background: #4099ff;
+        border: 1px solid #4099ff;
+        color:#ffffff;
+    }    
+}
+
+li.dropdown-menu-cus ul li:nth-of-type(4) a.social.social-sm{
+      &:hover {
+        background: #dd4b39;
+        border: 1px solid #dd4b39;
+        color:#ffffff;
+    }  
+}
+
+li.dropdown-menu-cus ul li:last-of-type a.social.social-sm{
+      &:hover {
+        background: #D34836;
+        border: 1px solid #D34836;
+        color:#ffffff;
+    }  
+}

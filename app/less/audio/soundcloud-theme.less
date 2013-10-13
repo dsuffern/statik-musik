@@ -1,0 +1,133 @@
+.sc-player {
+  font: normal 14px/1.6 "Roboto Slab", Arial, sans-serif;
+  background-color: lighten(#bdc3c7, 7.5%);
+  color: #333;
+  font-size: 0.875em; 
+  line-height: 1.6; 
+  a {text-decoration: none; color: #2F2F2F;}
+}
+
+
+/* Artworks */
+
+.sc-player .sc-artwork-list{   background-color: lighten(#bdc3c7, 7.5%); }
+
+/* scrubber */
+
+// .sc-scrubber {
+//   background-color: #e5e5e5;
+  // border-radius: 8px;
+  // .box-shadow( 1px 1px 4px #ccc);
+  // .sc-time-span { background-color: #fff; }
+// }
+
+
+// .sc-scrubber .sc-time-span img {
+//   .size(100%,30px); 
+  // background-color: #003399;
+  // background: -moz-linear-gradient(top, black, #003399 0px, #5d95d2 90%);
+  // background: -webkit-gradient(linear, left top, left 90%, from(black), color-stop(0%, #003399), to(#5d95d2));
+// }
+
+// .sc-scrubber .sc-buffer{
+//   background-color: #fff;
+//   opacity: 0.4;
+// }
+
+// .sc-scrubber .sc-played {
+//   background-color: #333;
+//   opacity: 0.4;
+// }
+
+
+/* controls */
+
+.sc-player .sc-controls a {
+  color: transparent;
+  background: url('../../img/Media-Play.png');
+
+  &:hover { background: url('../../img/Media-Play-hover.png'); }
+}
+
+
+.sc-player .sc-controls a.sc-pause {
+  background: url('../../img/Media-Pause-hover.png');
+
+  &:hover { background: url('../../img/Media-Pause-hover.png'); }
+}
+
+.sc-player.playing .sc-controls a.sc-pause{
+  background: url('../../img/Media-Pause-hover.png');
+  display: block;
+
+  &:hover { background: url('../../img/Media-Pause-hover.png'); }
+}  
+
+.sc-scrubber .sc-time-indicators{ background: #ecf0f1;
+                                  color: #333;
+                                  padding: 4px; }
+
+/* Track listings*/
+.sc-player ol.sc-trackslist li.active, .sc-player ol.sc-trackslist li:hover {
+  background-color: #ecf0f1;
+  padding: 4px;
+  color: #3498db; 
+}
+  .sc-player ol.sc-trackslist li.active a { color: #3498db; }
+
+.sc-track-duration {  text-align: right;
+                      float: right;
+                      padding: 0 5px;
+                      margin-left: 5px; }
+
+/* Track info*/
+.sc-player .sc-info { background: #ecf0f1; opacity: 0.9; }
+.sc-player .sc-info-toggle{ background: #ecf0f1;
+                            color: #003399; 
+                            padding: 4px;
+                              &:hover { background: #3498db; color: #eee; } }
+.sc-player .sc-info-close { background: #003399;
+                            color: #fff; 
+                            padding: 2px 4px;
+                            font-weight: bold; }
+
+
+/* scrubber */
+.sc-scrubber { background-color: transparent; //#e5e5e5  
+               .sc-time-span { background-color: #ff7700;
+                                 img { height: 40px; //30px
+                                       width: 100%;
+                                       background-color: #766766;}//#ff7700 
+                                      }
+}
+
+.sc-scrubber .sc-buffer, .sc-scrubber .sc-played { background-color: #999; opacity: 0.4; }
+.sc-scrubber .sc-played { background-color: #333; opacity: 0.4; }
+
+
+/* Track listings*/
+.sc-player ol.sc-trackslist li.active, 
+.sc-player ol.sc-trackslist li:hover {  background-color: darken(#fcfff1, 10%); padding: 4px; color: #003399;  }
+
+.sc-player ol.sc-trackslist li.active a { background-color: #ecf0f1; color: #003399; }
+
+.sc-track-duration {  text-align: right;
+                      float: right;
+                      padding: 0 5px;
+                      margin-left: 5px; }
+
+/* Track info*/
+.sc-player .sc-info{ background: #fff; opacity: 0.9; }
+.sc-player .sc-info-toggle{ background: #fff; 
+                            color: #003399;  
+                            padding: 4px; 
+                              &:hover{ background: #003399; color: #eee; } }
+
+.sc-player .sc-info-close{ background: #003399;
+                           color: #fff; 
+                           padding: 2px 4px;
+                           font-weight: bold; }
+
+.sc-volume-slider { background-color: #ecf0f1; }
+  .sc-volume-slider .sc-volume-status{ background-color: #666; border-right: 1px solid #003399; }
+

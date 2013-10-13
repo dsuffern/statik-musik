@@ -1,0 +1,32 @@
+
+// -----------------------------------------------------------
+// 		Body THEME STYLES
+// -----------------------------------------------------------
+body{ background-image: url('../../img//twinkle_twinkle.png'); } 
+
+//  CUSTOM SCROLL BAR
+// ============================
+::-webkit-scrollbar {
+  width: 10px; 
+  background-color: rgba(0,0,0,0); 
+  &:hover{
+  	background-color: rgba(0, 0, 0, 0.09);
+  }
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  *background: rgba(0,0,0,0.5);
+  // background: rgba(200,200,200,1);
+  background: #34493e;
+  -webkit-border-radius: 50px;
+
+  	&:active{
+		  /*background: rgba(60,60,60,0.61);  Some darker color when you click it */
+		  background: #2c3e50;
+		  -webkit-border-radius: 50px;  		
+  	}
+}
+/* draw any selected text yellow on red background */
+::-moz-selection { color: white;  background: @dark; }
+::selection      { color: white;  background: @dark; } 

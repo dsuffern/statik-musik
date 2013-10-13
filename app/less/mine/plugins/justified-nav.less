@@ -1,0 +1,57 @@
+#justified-header *, #justified-header { .zero(); }
+#justified-header {
+    margin-bottom: 0;
+    text-align: justify;
+    height: 128px;
+    height: 8em;
+    padding: 2em 5%;
+    background: #f3f3f3;
+    color: #3f3f3f;
+        &::after { content: '';
+                   display: inline-block;
+                   width: 100%; }
+
+        > div {
+        	    height: 100%;
+    			&::before{content: " "; height: 100%;}
+    			h1 {font-size: 3em; }
+        }
+}
+ 
+#justified-header > div,
+#justified-header > div::before,
+#justified-header nav,
+#justified-header > div h1 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+ 
+#justified-header nav a { padding: 0 0.6em;
+                          white-space: nowrap;
+                              &:last-child { padding-right: 0; }
+}
+
+nav, nav[class^="cl-effect-"] a {
+    font: 700 1em/1.5 "Roboto Slab Bold"; 
+	background-color: transparent;
+	color: #3f3f3f
+}
+ 
+@media screen and (max-width: 720px){
+     
+    #justified-header {
+        height: auto;
+    }
+     
+    #justified-header > div,
+    #justified-header > div h1,
+    #justified-header nav {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+     
+}
+ 
